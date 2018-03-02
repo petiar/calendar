@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block heading %}List of events{% endblock %}
+
+{% block body %}
+    <ul>
+    {% for entry in events %}
+        <li id="{{ entry.id }}">
+            <h3><a href="{{ path('event_show', {'id': entry.id}) }}">{{ entry.title }}</a></h3>
+            <p>{{ entry.body }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}SPM Conference Meeting Place{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+        <h1>{% block heading %}{% endblock %}</h1>
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+        {% block javascripts %}{% endblock %}
+        </div>
+    </body>
+</html>

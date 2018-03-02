@@ -1,0 +1,15 @@
+index:
+    path: /
+    controller: App\Controller\EventsController::index
+
+events:
+  path: /events
+  controller: \App\Controller\EventsController::index
+
+event_show:
+  path: /events/{id}
+  controller: \App\Controller\EventsController::event
+
+event_subscribe:
+  path: /events/{id}/subscribe
+  controller: \App\Controller\EventsController::subscribe

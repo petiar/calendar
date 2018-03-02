@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Event: {{ event.summary }}</h1>
+<small>Created: {{ event.created|date('d. m. Y, H:i') }}.</small>
+<p>Start: {{ event.start.dateTime|date('d. m. Y, H:i') }}</p>
+<p>End: {{ event.end.dateTime|date('d. m. Y, H:i') }}</p>
+<p>{{ event.description }}</p>
+<strong>Location: {{ event.location }}</strong>
+{% endblock %}
