@@ -57,6 +57,13 @@ class EventsController extends Controller
             $participant->setName($form->get('Name')->getViewData());
             $participant->setUserId($this->userId);
             $participant->setEmail($form->get('Email')->getViewData());
+            $participant->setEventId($id);
+            $participant->setAvailableToConnect(TRUE);
+            $participant->setComment('some comment');
+            $participant->setDatesAttending('20-05-2019');
+            $participant->setHotelLocation('London');
+            $participant->setIsSpeaker(TRUE);
+            $participant->setPhoneNumber('918 456 123');
 
             $entityManager->persist($participant);
 
