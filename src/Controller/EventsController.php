@@ -44,7 +44,7 @@ class EventsController extends Controller
         $participant->setUserId($this->userId);
 
         $form = $this->createForm(EventParticipantType::class, $participant, array(
-            'method' => 'post'
+            'method' => 'post',
         ));
 
         if ($request->getMethod() == "POST") {
